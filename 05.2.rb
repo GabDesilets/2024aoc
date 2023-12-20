@@ -8,7 +8,7 @@
 #     Then we store the result of the map.
 #     And again until there is no range remaining.
 
-seeds, *maps = File.read("example.txt").split("\n\n")
+seeds, *maps = File.read("input.txt").split("\n\n")
 seeds = seeds.split[1..-1].map(&:to_i)
 maps = maps.map { |m| m.split("\n")[1..-1].map { |line| line.split().map(&:to_i) } }
 
